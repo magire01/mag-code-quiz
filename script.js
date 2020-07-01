@@ -9,7 +9,7 @@ function setTime() {
         secondsLeft--;
         timerDiv.textContent = secondsLeft + " seconds remaining"
 
-        if (secondsLeft == 0) {
+        if (secondsLeft <= 0) {
             clearInterval(timerInterval);
             console.log("Game Over!!")
         } 
