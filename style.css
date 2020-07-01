@@ -1,9 +1,10 @@
 button {
     color: white;
     background-color: purple;
+    height: 60px;
+    width: auto;
+    min-width: 80px;
+    font-size: 40px;
+    margin-right: 20px;
 };
 
-#question1-div {
-    color: purple;
-    font-size: 50px;
-}
