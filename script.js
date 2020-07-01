@@ -1,7 +1,7 @@
 
 //TIMER
 var timerDiv = document.querySelector("#timer");
-var secondsLeft = 60;
+var secondsLeft = 30;
 
 function setTime() {
     var timerInterval = setInterval(function() {
@@ -184,9 +184,37 @@ function question4() {
     var createAnswer3 = document.createElement("button");
     createAnswer3.setAttribute("id", "button-incorrect43");
     createAnswer3.textContent = questionAnswer.allAnswer4[3];
-    answer1Div.appendChild(createAnswer3);  
+    answer1Div.appendChild(createAnswer3);
+    
+    answer4Button();
 };
 
+//Game Over Screen
+function gameOverScreen() {
+
+    //Remove Answer4 Buttons
+    var oldButton0 = document.getElementById("button-correct40");
+    document.getElementById("answer1-div").removeChild(oldButton0);
+    var oldButton1 = document.getElementById("button-incorrect41");
+    document.getElementById("answer1-div").removeChild(oldButton1);
+    var oldButton2 = document.getElementById("button-incorrect42");
+    document.getElementById("answer1-div").removeChild(oldButton2);
+    var oldButton3 = document.getElementById("button-incorrect43");
+    document.getElementById("answer1-div").removeChild(oldButton3);
+
+    //Game Over Title
+    document.createElement("h1", question1Div.textContent = "Game Over! Here is how you did");
+    //Show how many user got correct / incorrect
+    var scoreCard = document.createElement("card");
+    scoreCard.setAttribute("id", "score-card")
+    scoreCard.textContent = "You got x out of x questions correct!";
+    answer1Div.appendChild(scoreCard);
+    //Show how many seconds remain(Actual Score to be stored)
+    var scoreRecord = document.createElement("card");
+    scoreRecord.setAttribute("id", "score-record");
+    scoreRecord.textContent = "Your score is -secondsLeft-"
+    answer1Div.appendChild(scoreRecord);
+}
 
 //Home screen
 function startScreen() {
@@ -200,8 +228,9 @@ function startScreen() {
     
 };
 
-// Call startScreen function
+// Call startScreen function (opening page)
 startScreen();
+
 
 //Start Button - User clicks "Start" button and question1 generates
 function startButton() {
@@ -251,4 +280,16 @@ function answer3Button(){
     incorrectAnswerClick33.addEventListener("click", question4);
 }
 
+//Question 4 to Game Over Buttons
+function answer4Button() {
+    var correctAnswerClick40 = document.getElementById("button-correct40");
+    correctAnswerClick40.addEventListener("click", gameOverScreen);
+    //incorrect answers
+    var incorrectAnswerClick41 = document.getElementById("button-incorrect41");
+    incorrectAnswerClick41.addEventListener("click", gameOverScreen);
+    var incorrectAnswerClick42 = document.getElementById("button-incorrect42");
+    incorrectAnswerClick42.addEventListener("click", gameOverScreen);
+    var incorrectAnswerClick43 = document.getElementById("button-incorrect43");
+    incorrectAnswerClick43.addEventListener("click", gameOverScreen);
+}
 
