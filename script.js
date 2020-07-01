@@ -79,7 +79,7 @@ function question1() {
 function question2() {
     document.createElement("h3", question1Div.textContent = questionAnswer.question2);
 
-    //Remove Answer Buttons
+    //Remove Answer1 Buttons
     var oldButton0 = document.getElementById("button-correct10");
     document.getElementById("answer1-div").removeChild(oldButton0);
     var oldButton1 = document.getElementById("button-incorrect11");
@@ -91,26 +91,44 @@ function question2() {
     
 
 
-    //Answer Buttons
+    //Generate Answer2 Buttons
     var createAnswer0 = document.createElement("button");
+    createAnswer0.setAttribute("id", "button-correct20");
     createAnswer0.textContent = questionAnswer.allAnswer2[0];
     answer1Div.appendChild(createAnswer0);
 
     var createAnswer1 = document.createElement("button");
+    createAnswer1.setAttribute("id", "button-incorrect21");
     createAnswer1.textContent = questionAnswer.allAnswer2[1];
     answer1Div.appendChild(createAnswer1);
 
     var createAnswer2 = document.createElement("button");
+    createAnswer2.setAttribute("id", "button-incorrect22");
     createAnswer2.textContent = questionAnswer.allAnswer2[2];
     answer1Div.appendChild(createAnswer2);
 
     var createAnswer3 = document.createElement("button");
+    createAnswer3.setAttribute("id", "button-incorrect23");
     createAnswer3.textContent = questionAnswer.allAnswer2[3];
-    answer1Div.appendChild(createAnswer3);  
+    answer1Div.appendChild(createAnswer3);
+    
+    //Call answer2Button function
+    answer2Button();
 };
 
 //Question 3 Function
 function question3() {
+    //Remove Answer1 Buttons
+    var oldButton0 = document.getElementById("button-correct20");
+    document.getElementById("answer1-div").removeChild(oldButton0);
+    var oldButton1 = document.getElementById("button-incorrect21");
+    document.getElementById("answer1-div").removeChild(oldButton1);
+    var oldButton2 = document.getElementById("button-incorrect22");
+    document.getElementById("answer1-div").removeChild(oldButton2);
+    var oldButton3 = document.getElementById("button-incorrect23");
+    document.getElementById("answer1-div").removeChild(oldButton3);
+
+    //Generate Answer3 buttons
     document.createElement("h3", question1Div.textContent = questionAnswer.question3);
     var createAnswer0 = document.createElement("button");
     createAnswer0.textContent = questionAnswer.allAnswer3[0];
@@ -174,15 +192,29 @@ function startButton() {
 //Question 1 to 2 Buttons
 function answer1Button(){
     //correct Answer
-    var correctAnswerClick = document.getElementById("button-correct10");
-    correctAnswerClick.addEventListener("click", question2);
+    var correctAnswerClick10 = document.getElementById("button-correct10");
+    correctAnswerClick10.addEventListener("click", question2);
     //incorrect answers
-    var correctAnswerClick = document.getElementById("button-incorrect11");
-    correctAnswerClick.addEventListener("click", question2);
-    var correctAnswerClick = document.getElementById("button-incorrect12");
-    correctAnswerClick.addEventListener("click", question2);
-    var correctAnswerClick = document.getElementById("button-incorrect13");
-    correctAnswerClick.addEventListener("click", question2);
+    var incorrectAnswerClick11 = document.getElementById("button-incorrect11");
+    incorrectAnswerClick11.addEventListener("click", question2);
+    var incorrectAnswerClick12 = document.getElementById("button-incorrect12");
+    incorrectAnswerClick12.addEventListener("click", question2);
+    var incorrectAnswerClick13 = document.getElementById("button-incorrect13");
+    incorrectAnswerClick13.addEventListener("click", question2);
+}
+
+//Question 2 to 3 Buttons
+function answer2Button(){
+    //correct Answer
+    var correctAnswerClick20 = document.getElementById("button-correct20");
+    correctAnswerClick20.addEventListener("click", question3);
+    //incorrect answers
+    var incorrectAnswerClick21 = document.getElementById("button-incorrect21");
+    incorrectAnswerClick21.addEventListener("click", question3);
+    var incorrectAnswerClick22 = document.getElementById("button-incorrect22");
+    incorrectAnswerClick22.addEventListener("click", question3);
+    var incorrectAnswerClick23 = document.getElementById("button-incorrect23");
+    incorrectAnswerClick23.addEventListener("click", question3);
 }
 
 
