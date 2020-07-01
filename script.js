@@ -215,7 +215,7 @@ function gameOverScreen() {
     //Show how many user got correct / incorrect
     var scoreCard = document.createElement("card");
     scoreCard.setAttribute("id", "score-card")
-    scoreCard.textContent = "You got x out of x questions correct!";
+    scoreCard.textContent = "You got " + localStorage.getItem("Correct Answers") + " out of 4 questions correct!";
     answer1Div.appendChild(scoreCard);
     //Show how many seconds remain(Actual Score to be stored)
     var scoreRecord = document.createElement("card");
