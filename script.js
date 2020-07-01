@@ -1,8 +1,10 @@
 //TIMER
 var timerDiv = document.querySelector("#timer");
-var secondsLeft = 10;
+var secondsLeft = 60;
 
 function setTime() {
+    document.createElement("p")
+    document.textContent = secondsLeft;
     var timerInterval = setInterval(function() {
         secondsLeft--;
         timerDiv.textContent = secondsLeft + " seconds remaining"
@@ -15,7 +17,7 @@ function setTime() {
 }
 
 
-document.createElement("p", setTime());
+
 
 //Question Answer Variables
 var questionAnswer = {
@@ -243,7 +245,9 @@ startScreen();
 //Start Button - User clicks "Start" button and question1 generates
 function startButton() {
     var startButtonClick = document.getElementById("button-start");
+    startButtonClick.addEventListener("click", setTime);
     startButtonClick.addEventListener("click", question1);
+    
 }
 
 //Question 1 to 2 Buttons
