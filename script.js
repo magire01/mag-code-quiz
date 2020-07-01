@@ -1,19 +1,19 @@
-
 //TIMER
 var timerDiv = document.querySelector("#timer");
-var secondsLeft = 30;
+var secondsLeft = 10;
 
 function setTime() {
     var timerInterval = setInterval(function() {
         secondsLeft--;
         timerDiv.textContent = secondsLeft + " seconds remaining"
-    }, 1000);
 
-    if(secondsLeft === 0) {
-        clearInterval(timerInterval);
-        //Send a message GAME OVER
-    }
+        if (secondsLeft == 0) {
+            clearInterval(timerInterval);
+            console.log("Game Over!!")
+        } 
+    }, 1000);    
 }
+
 
 document.createElement("p", setTime());
 
