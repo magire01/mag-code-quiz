@@ -213,16 +213,16 @@ function gameOverScreen() {
     document.getElementById("answer1-div").removeChild(oldButton3);
 
     //Game Over Title
-    document.createElement("h1", question1Div.textContent = "Game Over! Here is how you did");
+    document.createElement("h1", question1Div.textContent = "Game Over! Here is how you did:");
     //Show how many user got correct / incorrect
     var scoreCard = document.createElement("card");
     scoreCard.setAttribute("id", "score-card")
-    scoreCard.textContent = "You got " + localStorage.getItem("Correct Answers") + " out of 4 questions correct!";
+    scoreCard.textContent = "You got " + localStorage.getItem("Correct Answers") + " out of 4 questions correct with " + secondsLeft + " seconds remaining!";
     answer1Div.appendChild(scoreCard);
     //Show how many seconds remain(Actual Score to be stored)
     var scoreRecord = document.createElement("card");
     scoreRecord.setAttribute("id", "score-record");
-    scoreRecord.textContent = "Your score is -secondsLeft-"
+    scoreRecord.textContent = "Your score is: " + secondsLeft;
     answer1Div.appendChild(scoreRecord);
 }
 
