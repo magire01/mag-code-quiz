@@ -42,7 +42,14 @@ var answer1Div = document.querySelector("#answer1-div");
 
 //Question 1 Function
 function question1() {
+    // Question 1
     document.createElement("h3", question1Div.textContent = questionAnswer.question1);
+
+    //Remove Start Button
+    var oldButton = document.getElementById("button-start");
+    document.getElementById("answer1-div").removeChild(oldButton);
+
+    //Answer Buttons
     var createAnswer0 = document.createElement("button");
     createAnswer0.textContent = questionAnswer.allAnswer1[0];
     answer1Div.appendChild(createAnswer0);
@@ -58,6 +65,8 @@ function question1() {
     var createAnswer3 = document.createElement("button");
     createAnswer3.textContent = questionAnswer.allAnswer1[3];
     answer1Div.appendChild(createAnswer3);  
+
+    
 };
 
 //Question 2 Function
@@ -104,7 +113,7 @@ function question4() {
     document.createElement("h3", question1Div.textContent = questionAnswer.question4);
     var createAnswer0 = document.createElement("button");
     createAnswer0.textContent = questionAnswer.allAnswer4[0];
-    answer1Div.appendChild(createAnswer0);
+    answer1Div.appendChild(reateAnswer0);
 
     var createAnswer1 = document.createElement("button");
     createAnswer1.textContent = questionAnswer.allAnswer4[1];
@@ -122,16 +131,24 @@ function question4() {
 
 //Home screen
 function startScreen() {
+    
     document.createElement("h1", question1Div.textContent = "Welcome to Code Quiz!");
     var createStartButton = document.createElement("button");
+    createStartButton.setAttribute("id", "button-start")
     createStartButton.textContent = "Start!";
     answer1Div.appendChild(createStartButton);
+    
 };
 
+// document.getElementById("#button-start").addEventListener("click", question1());
 startScreen();
 
-//Button Magic
-// document.addEventListener("click", question1());
+//Start Button - User clicks "Start" button and question1 generates
+var startButtonClick = document.getElementById("button-start");
+startButtonClick.addEventListener("click", question1);
+
+
+
 
 
 
