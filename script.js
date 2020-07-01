@@ -1,6 +1,6 @@
 //TIMER
 var timerDiv = document.querySelector("#timer");
-var secondsLeft = 60;
+var secondsLeft = 30;
 
 function setTime() {
     document.createElement("p")
@@ -264,14 +264,22 @@ function answer1Button(){
     correctAnswerClick10.addEventListener("click", question2);
     //incorrect answers
     var incorrectAnswerClick11 = document.getElementById("button-incorrect11");
-    incorrectAnswerClick11.addEventListener("click", function() {
+    incorrectAnswerClick11.addEventListener("click", function() { // This subtracts the time by 10 seconds
         console.log("Question 1 Incorrect!");
         secondsLeft -= 10;
     });
     incorrectAnswerClick11.addEventListener("click", question2);
     var incorrectAnswerClick12 = document.getElementById("button-incorrect12");
+    incorrectAnswerClick12.addEventListener("click", function() { // This subtracts the time by 10 seconds
+        console.log("Question 1 Incorrect!");
+        secondsLeft -= 10;
+    });
     incorrectAnswerClick12.addEventListener("click", question2);
     var incorrectAnswerClick13 = document.getElementById("button-incorrect13");
+    incorrectAnswerClick13.addEventListener("click", function() { // This subtracts the time by 10 seconds
+        console.log("Question 1 Incorrect!");
+        secondsLeft -= 10;
+    });
     incorrectAnswerClick13.addEventListener("click", question2);
 }
 
@@ -288,10 +296,22 @@ function answer2Button(){
     correctAnswerClick20.addEventListener("click", question3);
     //incorrect answers
     var incorrectAnswerClick21 = document.getElementById("button-incorrect21");
+    incorrectAnswerClick21.addEventListener("click", function() { // This subtracts the time by 10 seconds
+        console.log("Question 2 Incorrect!");
+        secondsLeft -= 10;
+    });
     incorrectAnswerClick21.addEventListener("click", question3);
     var incorrectAnswerClick22 = document.getElementById("button-incorrect22");
+    incorrectAnswerClick22.addEventListener("click", function() { // This subtracts the time by 10 seconds
+        console.log("Question 2 Incorrect!");
+        secondsLeft -= 10;
+    });
     incorrectAnswerClick22.addEventListener("click", question3);
     var incorrectAnswerClick23 = document.getElementById("button-incorrect23");
+    incorrectAnswerClick23.addEventListener("click", function() { // This subtracts the time by 10 seconds
+        console.log("Question 2 Incorrect!");
+        secondsLeft -= 10;
+    });
     incorrectAnswerClick23.addEventListener("click", question3);
 }
 
@@ -307,10 +327,22 @@ function answer3Button(){
     correctAnswerClick30.addEventListener("click", question4);
     //incorrect answers
     var incorrectAnswerClick31 = document.getElementById("button-incorrect31");
+    incorrectAnswerClick31.addEventListener("click", function() { // This subtracts the time by 10 seconds
+        console.log("Question 3 Incorrect!");
+        secondsLeft -= 10;
+    });
     incorrectAnswerClick31.addEventListener("click", question4);
     var incorrectAnswerClick32 = document.getElementById("button-incorrect32");
+    incorrectAnswerClick32.addEventListener("click", function() { // This subtracts the time by 10 seconds
+        console.log("Question 3 Incorrect!");
+        secondsLeft -= 10;
+    });
     incorrectAnswerClick32.addEventListener("click", question4);
     var incorrectAnswerClick33 = document.getElementById("button-incorrect33");
+    incorrectAnswerClick33.addEventListener("click", function() { // This subtracts the time by 10 seconds
+        console.log("Question 3 Incorrect!");
+        secondsLeft -= 10;
+    });
     incorrectAnswerClick33.addEventListener("click", question4);
 }
 
@@ -325,10 +357,22 @@ function answer4Button() {
     correctAnswerClick40.addEventListener("click", gameOverScreen);
     //incorrect answers
     var incorrectAnswerClick41 = document.getElementById("button-incorrect41");
+    incorrectAnswerClick41.addEventListener("click", function() { // This subtracts the time by 10 seconds
+        console.log("Question 4 Incorrect!");
+        secondsLeft -= 10;
+    });
     incorrectAnswerClick41.addEventListener("click", gameOverScreen);
     var incorrectAnswerClick42 = document.getElementById("button-incorrect42");
+    incorrectAnswerClick42.addEventListener("click", function() { // This subtracts the time by 10 seconds
+        console.log("Question 4 Incorrect!");
+        secondsLeft -= 10;
+    });
     incorrectAnswerClick42.addEventListener("click", gameOverScreen);
     var incorrectAnswerClick43 = document.getElementById("button-incorrect43");
+    incorrectAnswerClick43.addEventListener("click", function() { // This subtracts the time by 10 seconds
+        console.log("Question 4 Incorrect!");
+        secondsLeft -= 10;
+    });
     incorrectAnswerClick43.addEventListener("click", gameOverScreen);
 }
 
