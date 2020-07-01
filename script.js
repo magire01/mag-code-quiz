@@ -126,7 +126,7 @@ function startScreen() {
     var createStartButton = document.createElement("button");
     createStartButton.textContent = "Start!";
     answer1Div.appendChild(createStartButton);
-}
+};
 
 startScreen();
 
