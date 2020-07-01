@@ -51,27 +51,47 @@ function question1() {
 
     //Answer Buttons
     var createAnswer0 = document.createElement("button");
+    createAnswer0.setAttribute("id", "button-correct10");
     createAnswer0.textContent = questionAnswer.allAnswer1[0];
     answer1Div.appendChild(createAnswer0);
 
     var createAnswer1 = document.createElement("button");
+    createAnswer1.setAttribute("id", "button-incorrect11");
     createAnswer1.textContent = questionAnswer.allAnswer1[1];
     answer1Div.appendChild(createAnswer1);
 
     var createAnswer2 = document.createElement("button");
+    createAnswer2.setAttribute("id", "button-incorrect12");
     createAnswer2.textContent = questionAnswer.allAnswer1[2];
     answer1Div.appendChild(createAnswer2);
 
     var createAnswer3 = document.createElement("button");
+    createAnswer3.setAttribute("id", "button-incorrect13");
     createAnswer3.textContent = questionAnswer.allAnswer1[3];
     answer1Div.appendChild(createAnswer3);  
 
+    //Call answer1Button function
+    answer1Button();
     
 };
 
 //Question 2 Function
 function question2() {
     document.createElement("h3", question1Div.textContent = questionAnswer.question2);
+
+    //Remove Answer Buttons
+    var oldButton0 = document.getElementById("button-correct10");
+    document.getElementById("answer1-div").removeChild(oldButton0);
+    var oldButton1 = document.getElementById("button-incorrect11");
+    document.getElementById("answer1-div").removeChild(oldButton1);
+    var oldButton2 = document.getElementById("button-incorrect12");
+    document.getElementById("answer1-div").removeChild(oldButton2);
+    var oldButton3 = document.getElementById("button-incorrect13");
+    document.getElementById("answer1-div").removeChild(oldButton3);
+    
+
+
+    //Answer Buttons
     var createAnswer0 = document.createElement("button");
     createAnswer0.textContent = questionAnswer.allAnswer2[0];
     answer1Div.appendChild(createAnswer0);
@@ -88,6 +108,7 @@ function question2() {
     createAnswer3.textContent = questionAnswer.allAnswer2[3];
     answer1Div.appendChild(createAnswer3);  
 };
+
 //Question 3 Function
 function question3() {
     document.createElement("h3", question1Div.textContent = questionAnswer.question3);
@@ -137,18 +158,31 @@ function startScreen() {
     createStartButton.setAttribute("id", "button-start")
     createStartButton.textContent = "Start!";
     answer1Div.appendChild(createStartButton);
+    startButton();
     
 };
 
-// document.getElementById("#button-start").addEventListener("click", question1());
+// Call startScreen function
 startScreen();
 
 //Start Button - User clicks "Start" button and question1 generates
-var startButtonClick = document.getElementById("button-start");
-startButtonClick.addEventListener("click", question1);
+function startButton() {
+    var startButtonClick = document.getElementById("button-start");
+    startButtonClick.addEventListener("click", question1);
+}
 
-
-
-
+//Question 1 to 2 Buttons
+function answer1Button(){
+    //correct Answer
+    var correctAnswerClick = document.getElementById("button-correct10");
+    correctAnswerClick.addEventListener("click", question2);
+    //incorrect answers
+    var correctAnswerClick = document.getElementById("button-incorrect11");
+    correctAnswerClick.addEventListener("click", question2);
+    var correctAnswerClick = document.getElementById("button-incorrect12");
+    correctAnswerClick.addEventListener("click", question2);
+    var correctAnswerClick = document.getElementById("button-incorrect13");
+    correctAnswerClick.addEventListener("click", question2);
+}
 
 
