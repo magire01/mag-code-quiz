@@ -1,3 +1,9 @@
-h3 {
-    color: blue;
+button {
+    color: white;
+    background-color: purple;
 };
+
+#question1-div {
+    color: purple;
+    font-size: 50px;
+}

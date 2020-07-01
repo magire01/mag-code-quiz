@@ -31,10 +31,18 @@ var questionAnswer = {
     corectAnswer3: "1",
     allAnswer3: ["1", "3", "4", "5"],
 
-    question4: "What is the Capitol of Kentucky",
+    question4: "What is the Capital of Kentucky",
     corectAnswer4: "Frankfort",
     allAnswer4: ["Frankfort", "Lexington", "Louisville", "Bowling Green"]
 };
+
+// Correct Answer Counter
+var correctAnswerCount = 0;
+function correctAnswerCounter(){
+    localStorage.setItem("Correct Answers", correctAnswerCount++);
+}
+//This will set correctAnswerCount to 0
+correctAnswerCounter();
 
 // Question Answer Divs
 var question1Div = document.querySelector("#question1-div");
@@ -242,6 +250,11 @@ function startButton() {
 function answer1Button(){
     //correct Answer
     var correctAnswerClick10 = document.getElementById("button-correct10");
+    // CorrectAnswerCounter for question 1
+    correctAnswerClick10.addEventListener("click", function() {
+        console.log("Question 1 Correct!");
+        correctAnswerCounter();
+    });
     correctAnswerClick10.addEventListener("click", question2);
     //incorrect answers
     var incorrectAnswerClick11 = document.getElementById("button-incorrect11");
@@ -256,6 +269,12 @@ function answer1Button(){
 function answer2Button(){
     //correct Answer
     var correctAnswerClick20 = document.getElementById("button-correct20");
+    // CorrectAnswerCounter for question 2
+    correctAnswerClick20.addEventListener("click", function() {
+        console.log("Question 2 Correct!");
+        correctAnswerCounter();
+    });
+    //Take to Question3 Event listener
     correctAnswerClick20.addEventListener("click", question3);
     //incorrect answers
     var incorrectAnswerClick21 = document.getElementById("button-incorrect21");
@@ -270,6 +289,11 @@ function answer2Button(){
 function answer3Button(){
     //correct Answer
     var correctAnswerClick30 = document.getElementById("button-correct30");
+    // CorrectAnswerCounter for question 2
+    correctAnswerClick30.addEventListener("click", function() {
+        console.log("Question 3 Correct!");
+        correctAnswerCounter();
+    });
     correctAnswerClick30.addEventListener("click", question4);
     //incorrect answers
     var incorrectAnswerClick31 = document.getElementById("button-incorrect31");
@@ -282,7 +306,12 @@ function answer3Button(){
 
 //Question 4 to Game Over Buttons
 function answer4Button() {
+    //correct Answer
     var correctAnswerClick40 = document.getElementById("button-correct40");
+    correctAnswerClick40.addEventListener("click", function() {
+        console.log("Question 4 Correct!");
+        correctAnswerCounter();
+    });
     correctAnswerClick40.addEventListener("click", gameOverScreen);
     //incorrect answers
     var incorrectAnswerClick41 = document.getElementById("button-incorrect41");
