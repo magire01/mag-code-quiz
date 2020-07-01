@@ -242,10 +242,12 @@ function startScreen() {
 startScreen();
 
 
-//Start Button - User clicks "Start" button and question1 generates
+//Start Button - User clicks "Start" button -> Timer starts and question1 generates
 function startButton() {
     var startButtonClick = document.getElementById("button-start");
+    //Starts Timer
     startButtonClick.addEventListener("click", setTime);
+    //Loads Question1
     startButtonClick.addEventListener("click", question1);
     
 }
@@ -262,6 +264,10 @@ function answer1Button(){
     correctAnswerClick10.addEventListener("click", question2);
     //incorrect answers
     var incorrectAnswerClick11 = document.getElementById("button-incorrect11");
+    incorrectAnswerClick11.addEventListener("click", function() {
+        console.log("Question 1 Incorrect!");
+        secondsLeft -= 10;
+    });
     incorrectAnswerClick11.addEventListener("click", question2);
     var incorrectAnswerClick12 = document.getElementById("button-incorrect12");
     incorrectAnswerClick12.addEventListener("click", question2);
