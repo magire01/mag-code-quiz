@@ -251,7 +251,7 @@ function playAgain() {
 //Home screen
 function startScreen() {
     
-    document.createElement("h1", question1Div.textContent = "Welcome to Code Quiz!");
+    document.createElement("h1", question1Div.textContent = "Welcome to Code Quiz! Answer the questions in 30 seconds. Your score will be the time left when you finish. Be careful, any wrong answers will remove 10 seconds from the timer!");
     var createStartButton = document.createElement("button");
     createStartButton.setAttribute("id", "button-start")
     createStartButton.textContent = "Start!";
