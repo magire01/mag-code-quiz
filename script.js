@@ -29,9 +29,9 @@ var questionAnswer = {
     corrrectAnswer2: "7",
     allAnswer2: ["7", "2", "3", "4"],
 
-    question3: "How many fingers am I holding up?",
-    corectAnswer3: "1",
-    allAnswer3: ["1", "3", "4", "5"],
+    question3: "Who played Jerry on Seinfeld?",
+    corectAnswer3: "Jerry Seinfeld",
+    allAnswer3: ["Jerry Seinfeld", "Jason Alexander", "Julie-Marie Dreyfus", "Bryan Cranston"],
 
     question4: "What is the Capital of Kentucky",
     corectAnswer4: "Frankfort",
