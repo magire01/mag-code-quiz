@@ -224,6 +224,29 @@ function gameOverScreen() {
     scoreRecord.setAttribute("id", "score-record");
     scoreRecord.textContent = "Your score is: " + secondsLeft;
     answer1Div.appendChild(scoreRecord);
+    //Play Again Button
+    var createPlayAgainButton = document.createElement("button");
+    createPlayAgainButton.setAttribute("id", "button-play-again");
+    createPlayAgainButton.textContent = "Play Again!";
+    answer1Div.appendChild(createPlayAgainButton);
+    //Save High Score to storage
+    localStorage.setItem("Score", secondsLeft);
+    // get high score from storage to high-score id
+    var highScore = document.getElementById("high-score");
+
+    highScore.textContent = localStorage.getItem("Score");
+    playAgainButton();
+}
+
+// clear page and save high score
+function playAgain() {
+    //get score from loc storage and create element in top of page
+    var removeScoreCard = document.getElementById("score-card");
+    document.getElementById("answer1-div").removeChild(removeScoreCard);
+    var removeScoreRecord = document.getElementById("score-record");
+    document.getElementById("answer1-div").removeChild(removeScoreRecord);
+
+
 }
 
 //Home screen
@@ -249,6 +272,15 @@ function startButton() {
     startButtonClick.addEventListener("click", setTime);
     //Loads Question1
     startButtonClick.addEventListener("click", question1);
+    
+}
+
+//Play Again - Brings user back to StartScreen and logs high score
+function playAgainButton() {
+    var playAgainButtonClick = document.getElementById("button-play-again");
+    //return to Start Page
+    playAgainButtonClick.addEventListener("click", playAgain);
+    playAgainButtonClick.addEventListener("click", startScreen);
     
 }
 
