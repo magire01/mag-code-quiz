@@ -17,25 +17,23 @@ function setTime() {
 }
 
 
-
-
 //Question Answer Variables
 var questionAnswer = {
-    question1: "How many states are in the US?",
-    correctAnswer1: "50",
-    allAnswer1: ["50", "40", "52", "49"],
+    question1: "What is the standard markup language for Web pages?",
+    correctAnswer1: "HTML",
+    allAnswer1: ["HTML", "Java", "CSS", "C#"],
 
-    question2: "How many continents are there in the US?",
-    corrrectAnswer2: "7",
-    allAnswer2: ["7", "2", "3", "4"],
+    question2: "What is a scripting or programming language that allows you to implement complex features on web pages?",
+    corrrectAnswer2: "JavaScript",
+    allAnswer2: ["JavaScript", "CSS", "HTML", "iTunes"],
 
-    question3: "Who played Jerry on Seinfeld?",
-    corectAnswer3: "Jerry Seinfeld",
-    allAnswer3: ["Jerry Seinfeld", "Jason Alexander", "Julie-Marie Dreyfus", "Bryan Cranston"],
+    question3: "______ tag is an extension to HTML that can enclose any number of JavaScript",
+    corectAnswer3: "<script>",
+    allAnswer3: ["<script>", "<code>", "<function>", "<time>"],
 
-    question4: "What is the Capital of Kentucky",
-    corectAnswer4: "Frankfort",
-    allAnswer4: ["Frankfort", "Lexington", "Louisville", "Bowling Green"]
+    question4: "Which one of these options would print something to the console?",
+    corectAnswer4: "console.log()",
+    allAnswer4: ["console.log()", "printText", "console.text", "printConsole"]
 };
 
 // Correct Answer Counter
@@ -281,7 +279,6 @@ function playAgainButton() {
     playAgainButtonClick.addEventListener("click", playAgain);
     playAgainButtonClick.addEventListener("click", startScreen);
     playAgainButtonClick.addEventListener("click", removePlayAgainButton);
-    
 }
 
 //Remove Play Again Button
@@ -412,5 +409,6 @@ function answer4Button() {
         secondsLeft -= 10;
     });
     incorrectAnswerClick43.addEventListener("click", gameOverScreen);
+
 }
 
