@@ -233,7 +233,6 @@ function gameOverScreen() {
     localStorage.setItem("Score", secondsLeft);
     // get high score from storage to high-score id
     var highScore = document.getElementById("high-score");
-
     highScore.textContent = localStorage.getItem("Score");
     playAgainButton();
 }
