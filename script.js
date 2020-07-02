@@ -281,7 +281,14 @@ function playAgainButton() {
     //return to Start Page
     playAgainButtonClick.addEventListener("click", playAgain);
     playAgainButtonClick.addEventListener("click", startScreen);
+    playAgainButtonClick.addEventListener("click", removePlayAgainButton);
     
+}
+
+//Remove Play Again Button
+function removePlayAgainButton() {
+    var removePlayAgainButton = document.getElementById("button-play-again");
+    document.getElementById("answer1-div").removeChild(removePlayAgainButton);
 }
 
 //Question 1 to 2 Buttons
